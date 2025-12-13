@@ -235,3 +235,17 @@ Examples:
 📌 Used for logging or debugging.
 
 ---
+1️⃣ What is Node.js? (VERY IMPORTANT)
+2️⃣ What Node.js is NOT (interview trap)
+3️⃣ How Node.js works (CORE CONCEPT)
+4️⃣ Event Loop (MOST IMPORTANT)
+5️⃣ Your First Node Program
+6️⃣ Core Node Modules (VERY IMPORTANT)
+7️⃣ require vs import
+8️⃣ File System (fs) Module
+9️⃣ Asynchronous Nature (IMPORTANT)
+🔟 What is package.json?
+1️⃣1️⃣ npm (Node Package Manager)
+1️⃣2️⃣ Environment Variables
+1️⃣3️⃣ process object
+1️⃣4️⃣ Node.js Architecture (MEMORIZE)
