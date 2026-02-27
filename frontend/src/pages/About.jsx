@@ -4,86 +4,59 @@ const About = () => {
   return (
     <div className="min-h-screen bg-green-50 py-12 px-6">
       <div className="max-w-6xl mx-auto">
-
-        {/* Page Title */}
         <h1 className="text-4xl font-bold text-green-800 text-center mb-10">
           🌾 About KisanMitra AI
         </h1>
 
-        {/* Introduction Section */}
         <div className="bg-white p-8 rounded-2xl shadow-md mb-10">
           <h2 className="text-2xl font-semibold text-green-700 mb-4">
-            Empowering Farmers with Intelligent Agriculture
+            The tool for Indian Farmers
           </h2>
           <p className="text-gray-700 leading-relaxed">
-            KisanMitra AI is a next-generation Smart Agriculture platform
-            designed to help farmers make better decisions using Artificial
-            Intelligence. We combine modern AI/ML technology with practical
-            farming knowledge to solve real challenges faced by farmers —
-            including crop diseases, irrigation planning, fertilizer
-            management, and market awareness.
+            KisanMitra AI एक आधुनिक खेती का प्लेटफॉर्म है, जो आर्टिफिशियल
+            इंटेलिजेंस (AI) की मदद से किसानों को सही फैसले लेने में मदद करता है।
+            हम नई तकनीक और खेती के पुराने अनुभव को एक साथ जोड़ते हैं ताकि
+            किसानों की असली समस्याओं का समाधान हो सके—जैसे फसलों की बीमारियाँ
+            पहचानना, मंडी के भाव बताना और खेती से जुड़ी सलाह देना। इसके अलावा,
+            कई और नए फीचर्स भी जल्द आ रहे हैं।
           </p>
         </div>
 
-        {/* Problem Section */}
-        <div className="bg-white p-8 rounded-2xl shadow-md mb-10">
-          <h2 className="text-2xl font-semibold text-green-700 mb-4">
-            🚜 The Problem We Solve
-          </h2>
-          <ul className="list-disc pl-6 text-gray-700 space-y-2">
-            <li>Unpredictable weather conditions</li>
-            <li>Crop diseases and pest attacks</li>
-            <li>Improper fertilizer usage</li>
-            <li>Water mismanagement</li>
-            <li>Lack of real-time market information</li>
-            <li>Limited access to expert guidance</li>
-          </ul>
-        </div>
-
-        {/* Solution Section */}
         <div className="bg-white p-8 rounded-2xl shadow-md mb-10">
           <h2 className="text-2xl font-semibold text-green-700 mb-6">
-            🤖 Our AI-Powered Solution
+            🤖 Our Current available Solution
           </h2>
 
           <div className="grid md:grid-cols-2 gap-6">
-
             <div>
               <h3 className="font-semibold text-lg text-green-600">
-                🌱 Smart Crop Management
+                🌱 फसल सलाहकार (Crop Advisory)
               </h3>
               <p className="text-gray-700">
-                Personalized crop insights, growth tracking, and fertilizer schedules.
+                अपनी आमदनी बढ़ाने के लिए अलग-अलग प्रकार की फसलों के बारे में
+                जानें और सही जानकारी पाएँ।
               </p>
             </div>
 
             <div>
               <h3 className="font-semibold text-lg text-green-600">
-                🧪 AI Disease Detection
+                🧪 समय से पहले बीमारी पहचान (AI Disease Detection)
               </h3>
               <p className="text-gray-700">
-                Upload a leaf image and detect diseases instantly with treatment guidance.
+                पत्ते की फोटो अपलोड करें और तुरंत बीमारियों का पता लगाकर उनके
+                बचाव के उपाय जानें।
               </p>
             </div>
 
             <div>
               <h3 className="font-semibold text-lg text-green-600">
-                🌦 Irrigation & Fertilizer Advisor
+                🌦 मंडी भाव ट्रैकिंग (Mandi Price Tracking)
               </h3>
               <p className="text-gray-700">
-                7-day irrigation planning and soil-based nutrient recommendations.
+                ज़्यादा मुनाफ़ा कमाने के लिए अपनी फसल बेचने के लिए सबसे सही मंडी
+                और ताज़ा भाव खोजें।
               </p>
             </div>
-
-            <div>
-              <h3 className="font-semibold text-lg text-green-600">
-                🧠 Multilingual AI Agent
-              </h3>
-              <p className="text-gray-700">
-                Farmers can ask questions in their local language using voice or chat.
-              </p>
-            </div>
-
           </div>
         </div>
 
@@ -93,26 +66,12 @@ const About = () => {
             🌍 Our Vision
           </h2>
           <p className="text-gray-800 leading-relaxed">
-            We envision a future where every farmer has access to intelligent
-            digital tools. Our mission is to bridge the gap between traditional
-            farming and advanced technology, making agriculture more
-            sustainable, profitable, and data-driven.
+            We believe every farmer deserves access to the same advanced tech as
+            the rest of the world. By bridging the gap between the field and the
+            digital age, we’re making agriculture smarter, more sustainable,
+            and—most importantly—more rewarding for those who feed us.
           </p>
         </div>
-
-        {/* Technology Section */}
-        <div className="bg-white p-8 rounded-2xl shadow-md">
-          <h2 className="text-2xl font-semibold text-green-700 mb-4">
-            🏗 Built With Modern Technology
-          </h2>
-          <ul className="list-disc pl-6 text-gray-700 space-y-2">
-            <li>MERN Stack (MongoDB, Express, React, Node.js)</li>
-            <li>Machine Learning for disease & yield prediction</li>
-            <li>AI Agent with multilingual support</li>
-            <li>Cloud-based scalable architecture</li>
-          </ul>
-        </div>
-
       </div>
     </div>
   );
