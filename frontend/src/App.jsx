@@ -11,7 +11,8 @@ import Features from "./pages/Features.jsx";
 import About from "./pages/About.jsx"
 import Contact from "./pages/Contact.jsx"
 import HowToUse from "./pages/HowToUse.jsx"
-import AddressAutocomplete from "./pages/AddressAutocomplete.jsx";
+import CropAdvisory from "./pages/CropAdvisory.jsx";
+
 
 const App = () => {
   return (
@@ -21,8 +22,8 @@ const App = () => {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/address" element={<AddressAutocomplete />} />
         <Route path="/sign-in" element={<Login />} />
+        <Route path="/crop-advisory" element={<CropAdvisory />} />
 
         <Route
           path="/upload-image"

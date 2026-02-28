@@ -32,4 +32,4 @@ function calculateScore(crop, userInput) {
   return { score, matchedParameters };
 }
 
-module.exports = calculateScore;
+export default calculateScore;

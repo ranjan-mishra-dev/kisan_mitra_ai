@@ -3,8 +3,6 @@ import mongoose from "mongoose";
 const cropSuitabilitySchema = new mongoose.Schema(
   {
     cropName: String,
-    cropCategory: String,
-
     location: {
       state: [String],
       district: [String],
@@ -70,4 +68,4 @@ const cropSuitabilitySchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-module.exports = mongoose.model("CropSuitability", cropSuitabilitySchema);
+export default mongoose.model("CropSuitability", cropSuitabilitySchema);

@@ -4,7 +4,7 @@ import router from './routes/auth.routes.js';
 import cookieParser from 'cookie-parser';
 import predictRoutes from "./routes/predict.routes.js";
 import farmprofile from './routes/farmprofile.routes.js'
-
+import cropRoutes from './routes/cropadvisory.routes.js';
 
 const app = express();
 // app.trustproxy(1)
@@ -26,6 +26,7 @@ app.get('/', (req, res) => {
 app.use('/api/auth', router);
 app.use("/api/predict", predictRoutes);
 app.use("/api/farmprofile", farmprofile);
+app.use("/api/cropadvisory", cropRoutes);
 
 
 export default app;
