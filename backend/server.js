@@ -7,6 +7,7 @@ import farmprofile from './routes/farmprofile.routes.js'
 
 
 const app = express();
+// app.trustproxy(1)
 
 app.use(
   cors({

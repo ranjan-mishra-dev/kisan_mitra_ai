@@ -1,13 +1,13 @@
 import { useState, useContext } from "react";
 import { AuthContext } from "../context/AuthProvider.jsx";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import NavItem from "./NavItem.jsx";
 
 const Navbar = () => {
   const { user, logout, login, loading } = useContext(AuthContext);
   const [menuOpen, setMenuOpen] = useState(false);
   const [profileOpen, setProfileOpen] = useState(false);
-
-  // console.log("user: ", user);
+  const navigate = useNavigate();
 
   if (loading) {
     return (
@@ -17,15 +17,13 @@ const Navbar = () => {
     );
   }
 
-  // console.log("User from new navbar", user)
-  // console.log("User from new navbar1", user?.avatar)
-
   return (
     <nav className="bg-[#F9FAFB] border-b border-gray-200">
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-center h-16">
           {/* Logo + Tagline */}
-          <div className="flex items-center gap-3">
+
+          <Link to="/" className="flex items-center gap-3 cursor-pointer">
             <img
               src="https://n2r5uux6k5.ucarecd.net/9399c158-f5e5-41c5-bbe6-e84bc6331484/-/preview/1000x992/"
               alt="Logo"
@@ -39,14 +37,14 @@ const Navbar = () => {
                 Grow more, worry less — the AI way
               </p>
             </div>
-          </div>
+          </Link>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
-            <NavItem text="Features" />
-            <NavItem text="How to Use" />
-            <NavItem text="Contact" />
-            <NavItem text="About" />
+            <NavItem text="Features" to="/features" mobile={false} />
+            <NavItem text="How to Use" to="/how-to-use" mobile={false} />
+            <NavItem text="Contact" to="/contact" mobile={false}/>
+            <NavItem text="About" to="/about" mobile={false}/>
 
             {/* Profile */}
 
@@ -81,14 +79,14 @@ const Navbar = () => {
                   <div className="absolute right-0 mt-0 w-40 bg-white rounded-lg shadow-lg border">
                     <button
                       onClick={() => navigate("/profile")}
-                      className="block w-full text-left px-4 py-2 hover:bg-gray-100"
+                      className="block w-full text-left px-4 py-2 cursor-pointer transition"
                     >
                       Edit Profile
                     </button>
 
                     <button
                       onClick={logout}
-                      className="block w-full text-left px-4 py-2 text-red-600 hover:bg-gray-100"
+                      className="block w-full text-left px-4 py-2 text-red-600 hover:bg-gray-100 cursor-pointer transition"
                     >
                       Logout
                     </button>
@@ -112,10 +110,10 @@ const Navbar = () => {
       {menuOpen && (
         <div className="md:hidden bg-white border-t">
           <div className="flex flex-col px-4 py-3 gap-3">
-            <NavItem text="Features" mobile />
-            <NavItem text="How to Use" mobile />
-            <NavItem text="Contact" mobile />
-            <NavItem text="About" mobile />
+               <NavItem text="Features" to="/features" mobile={true} />
+            <NavItem text="How to Use" to="/how-to-use" mobile={true} />
+            <NavItem text="Contact" to="/contact" mobile={true}/>
+            <NavItem text="About" to="/about" mobile={true}/>
 
             <div className="flex items-center gap-3 pt-3 border-t">
               <img
@@ -140,17 +138,6 @@ const Navbar = () => {
   );
 };
 
-/* ---------- Reusable Components ---------- */
-
-const NavItem = ({ text, mobile }) => (
-  <button
-    className={`text-[#1F2933] font-medium hover:text-[#2E7D32] transition ${
-      mobile ? "text-left" : ""
-    }`}
-  >
-    {text}
-  </button>
-);
 
 const DropdownItem = ({ text, danger, mobile }) => (
   <button

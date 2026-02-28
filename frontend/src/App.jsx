@@ -7,6 +7,11 @@ import Profile from "./pages/Profile.jsx";
 import Navbar from "./components/NewNavbar.jsx";
 import UploadPlantImage from "./pages/UploadPlantImage.jsx";
 import { Toaster } from "react-hot-toast";
+import Features from "./pages/Features.jsx";
+import About from "./pages/About.jsx"
+import Contact from "./pages/Contact.jsx"
+import HowToUse from "./pages/HowToUse.jsx"
+import AddressAutocomplete from "./pages/AddressAutocomplete.jsx";
 
 const App = () => {
   return (
@@ -16,6 +21,7 @@ const App = () => {
 
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/address" element={<AddressAutocomplete />} />
         <Route path="/sign-in" element={<Login />} />
 
         <Route
@@ -35,6 +41,11 @@ const App = () => {
             </ProtectedRoute>
           }
         />
+
+        <Route path="/features" element={<Features />} />
+        <Route path="/how-to-use" element={<HowToUse />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/about" element={<About />} />
       </Routes>
     </div>
   );
