@@ -15,13 +15,9 @@ export const getCropAdvisory = async (req, res) => {
     );
 
     // const crops = await CropSuitability.find({});
-    const crops = await CropSuitability.find({
-      "location.state": state,
-      "location.district": district,
-      "soil.soilTypes": soilType,
-      "irrigation.irrigationTypes": irrigation,
-      "sowing.sowingMonths": sowingMonth,
-    });
+    const crops = await CropSuitability.find({});
+
+    console.log("crops got: ", await CropSuitability.findOne())
 
     const ranked = crops.map((crop) => {
       const { score, matchedParameters } = calculateScore(crop, req.body);
