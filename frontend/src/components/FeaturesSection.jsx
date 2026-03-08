@@ -1,84 +1,81 @@
+import React from "react";
+import { Camera, Leaf, LineChart, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
+
 const features = [
   {
-    title: "Crop Recommendation Engine",
-    desc: "AI-powered crop suggestions based on soil, season, and location.",
-    icon: "🌱",
+    title: "Disease Detection AI",
+    description:
+      "Instant diagnosis for your crops. Upload a photo and let our AI identify pests and diseases in seconds.",
+    icon: <Camera className="w-6 h-6" />,
+    link: "/upload-image",
+    cta: "Scan Now",
+    status: "active",
   },
   {
-    title: "Disease Detection",
-    desc: "Detect crop diseases instantly using leaf image analysis.",
-    icon: "🧪",
+    title: "Crop Advisory",
+    description:
+      "Personalized expert advice on what to grow based on your soil, weather, and region for maximum yield.",
+    icon: <Leaf className="w-6 h-6" />,
+    link: "/crop-advisory",
+    cta: "Get Advice",
+    status: "active",
   },
   {
-    title: "Upcoming Weather Report",
-    desc: "Accurate weather forecasts to plan irrigation and harvesting.",
-    icon: "🌦️",
-  },
-  {
-    title: "Mandi Price Insights",
-    desc: "Live mandi prices to help farmers sell at the best rates.",
-    icon: "💰",
-  },
-  {
-    title: "Multilingual AI Agent",
-    desc: "Talk to AI in your local language for farming guidance.",
-    icon: "🗣️",
-  },
-  {
-    title: "Bank Loan & Govt Schemes",
-    desc: "Discover eligible loans and government farming schemes easily.",
-    icon: "🏦",
-  },
-  {
-    title: "Farm Analysis Dashboard",
-    desc: "Visual insights on crop health, yield, and expenses.",
-    icon: "📊",
+    title: "Mandi Price",
+    description:
+      "Real-time market rates from across the country to help you sell at the right time for the best profit.",
+    icon: <LineChart className="w-6 h-6" />,
+    link: "#",
+    cta: "Coming Soon",
+    status: "upcoming",
   },
 ];
 
 const FeaturesSection = () => {
   return (
-    <section className="bg-white py-20">
-      <div className="max-w-7xl mx-auto px-4">
+    
+    <section className="py-20 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+          Empowering Your Farming Journey
+        </h2>
+        <p className="mt-4 text-xl text-gray-600">
+          Smart tools designed to increase productivity and reduce crop loss.
+        </p>
 
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-14">
-          <span className="inline-block bg-[#FBC02D]/20 text-[#6D4C41] px-4 py-1 rounded-full text-sm font-medium mb-4">
-            🚀 What We Offer
-          </span>
-
-          <h2 className="text-3xl md:text-4xl font-bold text-[#1F2933] mb-4">
-            Next-Gen Intelligent Features
-          </h2>
-
-          <p className="text-[#1F2933]/80 text-lg">
-            Smart, reliable, and farmer-friendly AI tools designed to
-            improve productivity and reduce risk.
-          </p>
-        </div>
-
-        {/* Features Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-3">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="group bg-[#F9FAFB] border border-gray-200 rounded-2xl p-6 hover:shadow-xl hover:-translate-y-1 transition-all"
+              className={`relative p-8 bg-white border border-gray-100 rounded-2xl shadow-sm transition-all duration-300 hover:shadow-xl ${feature.status === "upcoming" ? "opacity-75" : "hover:-translate-y-2"}`}
             >
-              <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-[#2E7D32]/10 text-2xl mb-4">
+              <div className="inline-flex items-center justify-center p-3 bg-green-100 text-green-600 rounded-lg mb-6">
                 {feature.icon}
               </div>
-
-              <h3 className="text-xl font-semibold text-[#1F2933] mb-2 group-hover:text-[#2E7D32] transition">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
                 {feature.title}
               </h3>
-
-              <p className="text-[#1F2933]/70">
-                {feature.desc}
+              <p className="text-gray-600 mb-8 leading-relaxed">
+                {feature.description}
               </p>
+
+              {feature.status === "active" ? (
+                <Link
+                  to={feature.link}
+                  className="inline-flex items-center font-semibold text-green-600 hover:text-green-700 group"
+                >
+                  {feature.cta}
+                  <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+                </Link>
+              ) : (
+                <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                  {feature.cta}
+                </span>
+              )}
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );
