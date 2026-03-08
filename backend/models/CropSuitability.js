@@ -68,4 +68,11 @@ const cropSuitabilitySchema = new mongoose.Schema(
   { timestamps: true }
 );
 
+cropSuitabilitySchema.index({
+  "location.state": 1,
+  "location.district": 1,
+  "soil.soilTypes": 1,
+  "sowing.sowingMonths": 1
+});
+
 export default mongoose.model("CropSuitability", cropSuitabilitySchema);
