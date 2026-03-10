@@ -5,19 +5,8 @@ import calculateScore from "../config/rankCropsCalculateItsScore.js";
 export const getCropAdvisory = async (req, res) => {
   try {
     const { state, district, soilType, irrigation, sowingMonth } = req.body;
-    console.log(
-      "Data crop advisory: ",
-      state,
-      district,
-      soilType,
-      irrigation,
-      sowingMonth,
-    );
-
-    // const crops = await CropSuitability.find({});
+    
     const crops = await CropSuitability.find({});
-
-    console.log("crops got: ", await CropSuitability.findOne())
 
     const ranked = crops.map((crop) => {
       const { score, matchedParameters } = calculateScore(crop, req.body);
@@ -29,7 +18,6 @@ export const getCropAdvisory = async (req, res) => {
     });
 
     ranked.sort((a, b) => b.score - a.score);
-    // console.log(ranked.slice(0, 6));
 
     res.status(200).json({
       success: true,
@@ -43,9 +31,13 @@ export const getCropAdvisory = async (req, res) => {
 export const getHindiSummary = async (req, res) => {
   try {
     const { selectedCrops, farmerInput } = req.body;
+    // console.log("crop advisory gemini ", farmerInput.district)
 
     const API_KEY = process.env.GEMINI_API_KEY;
     const ai = new GoogleGenAI({ apiKey: API_KEY });
+
+    // console.log("ai: ", ai);
+
 
     const prompt = `
     आप एक कृषि विशेषज्ञ हैं।
@@ -69,7 +61,10 @@ export const getHindiSummary = async (req, res) => {
       contents: [{ parts: [{ text: prompt }] }],
     });
 
-    const text = response.text();
+    console.log("Text")
+
+    const text = response.text;
+    console.log("text by crop advisory gemini: ", text)
 
     res.status(200).json({ success: true, summary: text });
   } catch (error) {
