@@ -50,3 +50,8 @@ Kisan Mitra AI is an AI-powered agriculture platform that assists farmers with p
 
 ![Kisan Mitra AI disease detection](./screenshots/disease3.png)
 
+## 🎥 Project Demo
+
+Click the image below to watch the full demo of **Kisan Mitra AI**.
+
+[![Kisan Mitra AI Demo](./screenshots/kisanmitra.png)](https://drive.google.com/file/d/16_ujh9--TmOa6DkWzSrZBts_GDggZkkL/view?usp=sharing)
