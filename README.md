@@ -110,3 +110,143 @@ Click the image below to watch the full demo of **Kisan Mitra AI**.
 5. **Hybrid Advisory Logic:** The system retrieves factual agricultural data from MongoDB Atlas and combines it with Gemini AI to generate accurate crop advisory responses.
 
 6. **Data Delivery:** The backend compiles predictions, advisory insights, and market data, then returns the results to the frontend for clear user display.
+
+---
+
+## 📂 Project Structure
+
+```
+kisan-mitra-ai
+│
+├── client/                # React frontend
+│   ├── public/
+│   ├── src/ e.g. pages, components
+│   └── package.json
+│
+├── server/                # Node.js + Express backend
+│   ├── routes/
+│   ├── models/
+│   ├── controller/
+│   ├── config/
+│   ├── services/          # express configuration
+│   ├── app.js/            # server startup
+│   ├── middleware/
+│   └── server.js
+│
+├── ml_service/            # Machine learning service
+│   ├── model/
+│   ├── app.py
+│   └── requirements.txt
+│
+├── screenshots/           # Images used in README
+│
+├── .env.example           # Environment var template
+└── README.md
+
+```
+
+---
+
+## ⚙️ Installation & Setup
+
+Follow the steps below to run **Kisan Mitra AI** locally.
+
+### 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/your-username/kisan-mitra-ai.git
+cd kisan-mitra-ai
+```
+
+### 2️⃣ Setup Backend
+
+```bash
+cd backend
+npm install
+```
+
+Create a `.env` file using `.env.example` and add the required environment variables.
+
+Start the backend server:
+
+```bash
+node app.js
+```
+
+---
+
+### 3️⃣ Setup Frontend
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+---
+
+### 4️⃣ Setup ML Service
+
+```bash
+cd ml_service
+python -m venv myenv311
+
+myenv311\Scripts\activate
+pip install -r requirements.txt
+
+uvicorn app:app --host 0.0.0.0 --port 8000
+```
+
+---
+
+### 5️⃣ Access the Application
+
+Open your browser and visit:
+
+```
+http://localhost:5173
+```
+---
+
+## 📡 API Endpoints
+
+### Authentication
+
+| Method | Endpoint | Description |
+|------|------|------|
+| POST | `/api/auth/google` | Authenticate user using Google OAuth |
+| GET | `/api/auth/me` | Login user with credentials |
+| POST | `/api/auth/logout` | Register a new user |
+
+---
+
+### Crop Disease Detection
+
+| Method | Endpoint | Description |
+|------|------|------|
+| POST | `/api/predict/` | Upload a crop image and receive AI-based disease detection along with possible treatment suggestions |
+
+---
+
+### Crop Advisory
+
+| Method | Endpoint | Description |
+|------|------|------|
+| POST | `/api/cropadvisory/advisory` | Generate AI-powered crop advisory using crop details, weather insights, and agricultural data |
+| POST | `/api/cropadvisory/hindi-summary` | Generate a simplified Hindi summary of the crop advisory for better farmer accessibility |
+
+---
+
+### Farm Profile
+
+| Method | Endpoint | Description |
+|------|------|------|
+| GET | `/api/farmprofile/me` | Retrieve the authenticated user's farm profile information |
+| PUT | `/api/farmprofile/update` | Update or modify the user's farm profile details such as crop type, land size, and location |
+
+---
+
+Future work
+
+---
+author
