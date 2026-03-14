@@ -4,7 +4,6 @@ import path from "path";
 
 dotenv.config();
 
-// const serviceAccount = path.resolve("firebase-service-key.json");
 const serviceAccount = {
   "type": "service_account",
   "project_id": process.env.FIREBASE_PROJECT_ID,

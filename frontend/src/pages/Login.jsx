@@ -24,8 +24,6 @@ const Login = () => {
 
       const firebaseIdToken = await firebaseUser.getIdToken();
 
-      // console.log(firebaseIdToken);
-
       const response = await api.post("/api/auth/google", {
         token: firebaseIdToken,
       });
@@ -45,7 +43,7 @@ const Login = () => {
 
   return (
     <div>
-      <button onClick={loginWithGoogle}>Login with Google</button>
+      <button onClick={loginWithGoogle}>You are not login :(</button>
     </div>
   );
 };

@@ -23,7 +23,14 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/sign-in" element={<Login />} />
-        <Route path="/crop-advisory" element={<CropAdvisory />} />
+        <Route
+          path="/crop-advisory"
+          element={
+            <ProtectedRoute>
+              <CropAdvisory />
+            </ProtectedRoute>
+          }
+        />
 
         <Route
           path="/upload-image"
@@ -33,6 +40,7 @@ const App = () => {
             </ProtectedRoute>
           }
         />
+
 
         <Route
           path="/profile"

@@ -36,7 +36,7 @@ Kisan Mitra AI is an AI-powered agriculture platform that assists farmers with p
 
 * **AI-Powered Disease Detection:** Instant identification of crop diseases via image uploads with actionable recovery steps.
 * **Intelligent Crop Advisory:** Personalized recommendations for crop selection and soil management based on real-time data.
-* **Mandi Price (Market Rates):** Live tracking of regional and national market prices to maximize profit margins.
+* **Mandi Price (Market Rates):** Live tracking of regional and national market prices to maximize profit margins, [working].
 * **Interactive Dashboard:** A simplified view of all agricultural insights, from soil health to harvest readiness.
 * **Hindi Language Support:** Breaking the language barrier with a fully localized text interface.
 * **Mobile-First UI:** An easy-to-use, responsive interface designed specifically for mobile users.
@@ -44,14 +44,69 @@ Kisan Mitra AI is an AI-powered agriculture platform that assists farmers with p
 
 
 
-![Kisan Mitra AI Disease detection](./screenshots/disease1.png)
+![Kisan Mitra AI Disease detection](./screenshots/ai_disease_detection.png)
 
-![Kisan Mitra AI disease detection](./screenshots/disease2.png)
-
-![Kisan Mitra AI disease detection](./screenshots/disease3.png)
 
 ## 🎥 Project Demo
 
 Click the image below to watch the full demo of **Kisan Mitra AI**.
 
 [![Kisan Mitra AI Demo](./screenshots/kisanmitra.png)](https://drive.google.com/file/d/16_ujh9--TmOa6DkWzSrZBts_GDggZkkL/view?usp=sharing)
+
+---
+
+## 🛠 Tech Stack
+
+### Frontend
+- React.js
+- Lucide-react & toast
+- JavaScript
+- Tailwind CSS
+
+### Backend
+- Node.js
+- Express.js
+- REST APIs
+- JWT Authentication
+- Google OAuth
+
+### Database
+- Firebase
+- MongoDB Atlas
+
+### AI / Machine Learning
+- Python
+- TensorFlow
+- MobileNetV2
+- FastAPI
+
+### Tools
+- Git & GitHub
+- Postman
+- Render (Deployment)
+
+---
+
+## System Architecture Diagram
+- Register/Login work flow
+![Login Architecture Diagram](./screenshots/login_architecture.png)
+
+- Plant Disease Detection Architecture
+![Disease Detection Architecture Diagram](./screenshots/disease_detection_arch.png)
+
+- Crop Advisory work flow
+![Disease Detection Architecture Diagram](./screenshots/disease_detection_arch.png)
+
+### Platform Workflow
+
+1. **Authentication:** Users securely log in using Google OAuth to access their personalized dashboard.
+
+2. **User Request:** Users upload crop images for disease detection or request crop advisory and real-time mandi prices (agricultural market prices).
+
+3. **Request Orchestration:** The React frontend captures user input and sends structured API requests to the Node.js/Express backend.
+
+4. **Specialized Processing:** For disease detection, the backend forwards the image to a Python FastAPI ML service where the MobileNetV2 model performs fast inference.
+
+5. **Hybrid Advisory Logic:** The system retrieves factual agricultural data from MongoDB Atlas and combines it with Gemini AI to generate accurate crop advisory responses.
+
+6. **Data Delivery:** The backend compiles predictions, advisory insights, and market data, then returns the results to the frontend for clear user display.

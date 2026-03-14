@@ -55,7 +55,7 @@ def format_result(class_name, confidence):
     }
 
 # --- 3. PREDICTION ENDPOINT ---
-@app.post("/predict")
+@app.post("/api/ml-predict")
 async def predict(file: UploadFile = File(...)):
     if MODEL is None or CLASS_NAMES is None:
         raise HTTPException(status_code=500, detail="Model system is not ready.")

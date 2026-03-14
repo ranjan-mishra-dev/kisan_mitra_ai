@@ -6,7 +6,7 @@ export const callMLService = async (imageBuffer) => {
   formData.append("file", imageBuffer, "image.jpg");
 
   const res = await axios.post(
-    "http://localhost:8000/predict",
+    "http://localhost:8000/api/ml-predict",
     formData,
     { headers: formData.getHeaders() }
   );

@@ -13,6 +13,8 @@ export const googleAuth = async (req, res) => {
     const { email, uid, name, picture } = decoded;
 
     let user = await User.findOne({ email });
+  
+
     if (!user) {
       user = await User.create({
         googleId: uid,
