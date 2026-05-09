@@ -20,7 +20,7 @@ app.use(express.json())
 app.use(cookieParser());
 
 app.get('/', (req, res) => {
-  return res.send("hii from backend");
+  return res.send("Backend API is running.");
 })
 
 app.use('/api/auth', router);
