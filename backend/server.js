@@ -7,7 +7,6 @@ import farmprofile from './routes/farmprofile.routes.js'
 import cropRoutes from './routes/cropadvisory.routes.js';
 
 const app = express();
-// app.trustproxy(1)
 
 app.use(
   cors({
