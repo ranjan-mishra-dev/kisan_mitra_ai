@@ -95,7 +95,7 @@ Click the image below to watch the full demo of **Kisan Mitra AI**.
 ![Disease Detection Architecture Diagram](./screenshots/disease_detection_arch.png)
 
 - Crop Advisory work flow
-![Disease Detection Architecture Diagram](./screenshots/disease_detection_arch.png)
+![Disease Detection Architecture Diagram](./screenshots/crop_advisory_arch.png)
 
 ### Platform Workflow
 
