@@ -11,6 +11,11 @@ KisanMitra AI is an end-to-end smart agriculture solution designed to support fa
 
 ---
 
+### 🔗 Live Demo
+
+- Live Link: [Coming Soon]
+- Video Demo: [Watch Here](https://drive.google.com/file/d/16_ujh9--TmOa6DkWzSrZBts_GDggZkkL/view?usp=sharing)
+
 ## Problem Statement
 
 Farmers face several challenges throughout the agricultural lifecycle:
@@ -23,8 +28,9 @@ Farmers face several challenges throughout the agricultural lifecycle:
 - Poor crop decisions that often result in reduced yield and financial losses.
 
 
-
-## 🌾 Project Overview  
+ <br />
+ 
+# 🌾 Project Overview  
 
 Kisan Mitra AI is an AI-powered agriculture platform that assists farmers with plant disease detection, crop advisory, and real-time mandi price (agricultural market price) insights to improve productivity and profitability.
 
@@ -46,12 +52,6 @@ Kisan Mitra AI is an AI-powered agriculture platform that assists farmers with p
 
 ![Kisan Mitra AI Disease detection](./screenshots/ai_disease_detection.png)
 
-
-## 🎥 Project Demo
-
-Click the image below to watch the full demo of **Kisan Mitra AI**.
-
-[![Kisan Mitra AI Demo](./screenshots/kisanmitra.png)](https://drive.google.com/file/d/16_ujh9--TmOa6DkWzSrZBts_GDggZkkL/view?usp=sharing)
 
 ---
 
@@ -147,7 +147,7 @@ kisan-mitra-ai
 
 ---
 
-## ⚙️ Installation & Setup
+# ⚙️ Installation & Setup
 
 Follow the steps below to run **Kisan Mitra AI** locally.
 
@@ -208,7 +208,7 @@ http://localhost:5173
 ```
 ---
 
-## 📡 API Endpoints
+# 📡 API Endpoints
 
 ### Authentication
 
@@ -246,7 +246,38 @@ http://localhost:5173
 
 ---
 
-Future work
+</br>
+
+# Future Work
+
+Going to add 2 features.
+### Real-Time Mandi Price Tracking
+- Integrate live mandi (market) prices for crops from nearby regions.
+- Help farmers compare prices across surrounding markets in real time.
+
+### Weather Forecast Integration
+- Add real-time weather reports and forecasting.
+
+<br />
+
+## 📜 License
+
+This project is licensed under the MIT License. You are free to use, modify, and distribute this software in accordance with the license terms.
 
 ---
-author
+
+## 👨‍💻 Author
+
+### Developed By
+**Ranjan Mishra**  
+Full Stack Developer passionate about building scalable SaaS products, real-time applications, and developer-focused platforms.
+
+---
+
+### 🌐 Connect With Me
+
+- GitHub: https://github.com/ranjan-mishra-dev
+- LinkedIn: https://linkedin.com/in/im-ranjan
+- LeetCode: https://leetcode.com/u/ranjanmishra_lc
+
+---
