@@ -12,7 +12,7 @@ const PlantDiseaseDetect = () => {
     const formData = new FormData();
     formData.append("image", imgFile);
     // Replace with your production URL when deploying
-    const res = await axios.post("http://localhost:5000/api/predict", formData);
+    const res = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/predict`, formData);
     return res.data;
   };
 

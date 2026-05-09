@@ -61,10 +61,8 @@ const Profile = () => {
     const fetchFarmProfile = async () => {
       try {
         const res = await api.get("/api/farmprofile/me");
-        console.log("res profile.jsx ",  res)
 
         const profile = res.data.data;
-        console.log("profile.jsx", profile)
 
         // if (!profile) {
         //   toast("No farm profile found. Please create one.");
@@ -132,9 +130,8 @@ const Profile = () => {
     data.append("landSize", formData.landSize);
     data.append("preferredLanguage", formData.preferredLanguage);
 
-    console.log("profile data from profile.jsx", data.name);
 
-    await axios.put("http://localhost:5000/api/farmprofile/update", data, {
+    await axios.put(`${import.meta.env.VITE_BACKEND_URL}/api/farmprofile/update`, data, {
       headers: { "Content-Type": "multipart/form-data" },
       withCredentials: true,
     });
