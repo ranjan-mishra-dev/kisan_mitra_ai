@@ -35,8 +35,10 @@ export const googleAuth = async (req, res) => {
 
     res.cookie("token", appToken, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
+      secure: true,
       sameSite: "strict",
+      sameSite: 'none', // 👈 CRITICAL: Allows cross-site cookie sharing
+      maxAge: 24 * 60 * 60 * 1000 // 1 day
     });
 
     res.json({
