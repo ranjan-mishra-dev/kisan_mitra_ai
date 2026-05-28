@@ -13,7 +13,7 @@ KisanMitra AI is an end-to-end smart agriculture solution designed to support fa
 
 ### 🔗 Live Demo
 
-- <a href="https://your-link.com" target="_blank">Live</a>
+- <a href="https://www.kisanmitrai.in/" target="_blank">Live</a>
 - Video Demo: [Watch Here](https://drive.google.com/file/d/16_ujh9--TmOa6DkWzSrZBts_GDggZkkL/view?usp=sharing)
 
 ## Problem Statement
